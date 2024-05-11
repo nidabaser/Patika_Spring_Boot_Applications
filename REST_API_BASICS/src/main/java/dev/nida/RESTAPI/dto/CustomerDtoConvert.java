@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomerDtoConvert {
 
+    // MODEL MAPPER YAPINCA BU SINIFA GEREK KALMADI İSTENİRSE SİLİNEBİLİR
+
+    /*
     public CustomerDto convertDto(Customer customer) {
 
         // Uzun yolu
@@ -27,4 +30,5 @@ public class CustomerDtoConvert {
                 customer.getMail()
         );
     }
+    */
 }

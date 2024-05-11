@@ -1,5 +1,6 @@
 package dev.nida.RESTAPI.dto;
 
+import dev.nida.RESTAPI.entity.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 //POJO class, Customer Object --> CustomerDto Object dönüştürmek için
-public class CustomerDto {
+public class CustomerResponse {
     private int id;
     private String name;
     private String mail;
+    private Customer.Gender gender; // Mesela yeni alan ekledik, getAll 'da yoktu buraya yazmak yetiyor artık getAll'da gözükücek (POSTMAN'de)
+
 }
