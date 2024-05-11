@@ -1,6 +1,8 @@
 package dev.nida.RESTAPI.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import java.time.LocalDate;
 
@@ -22,8 +24,10 @@ public class Customer {
     private int id;
 
     @Column(name = "customer_name", nullable = false, length = 20)
+    @NotNull // VALIDATION
     private String name;
 
+    @Email(message = "Please enter valid email address") // VALIDATION
     @Column(name = "customer_mail", nullable = false, unique = true)
     private String mail;
 
